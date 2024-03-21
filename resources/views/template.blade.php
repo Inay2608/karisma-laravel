@@ -364,8 +364,8 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                   @yield('main')
+                    @include('flashmessage')
+                    @yield('main')
 
                 </div>
                 <!-- /.container-fluid -->
@@ -430,7 +430,7 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('sb/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('sb/js/demo/chart-pie-demo.js')}}"></script>
-
+    @yield('js');
 </body>
 
 </html>
