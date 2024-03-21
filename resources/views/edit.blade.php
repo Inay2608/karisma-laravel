@@ -23,6 +23,14 @@
                 is-invalid
             @enderror name="alamat" value="{{ $data->alamat  }}">
         </div>
+        <div class="form-group">
+            <label for="sekolah_id">Sekolah</label>
+            <select class="form-control" name="sekolah_id">
+                @foreach ($sekolah as $item)
+                    <option value="{{$item->id}}" @selected($data->sekolah_id == $item->id)>{{$item->nama_sekolah}}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="sumbit" class="btn btn-primary">Update</button>
     </form>
 @endsection

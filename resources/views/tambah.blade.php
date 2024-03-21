@@ -16,6 +16,15 @@
             <label for="alamat">Alamat</label>
             <input type="text" class="form-control" @error('alamat') is-invalid @enderror name="alamat" value="{{ old('alamat') }}">
         </div>
+        <div class="form-group">
+            <label for="sekolah_id">Sekolah</label>
+            <select class="form-control" name="sekolah_id">
+                <option>--Pilih--</option>
+                @foreach ($sekolah as $item)
+                    <option value="{{$item->id}}">{{$item->nama_sekolah}}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="sumbit" class="btn btn-primary">Sumbit</button>
     </form>
 @endsection
